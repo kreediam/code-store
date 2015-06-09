@@ -1,1 +1,1 @@
-javascript:(function(){ function RemoveAll(){ $$("[href='javascript:trash']").invoke('click'); })();
+javascript:(function RemoveAll(){ $$("[href='javascript:trash']").invoke('click'); })();
