@@ -1,0 +1,6 @@
+        private static readonly Lazy<string> Version = new Lazy<string>(() =>
+        {
+            long date = File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location).Ticks;
+            string ver = HttpServerUtility.UrlTokenEncode(BitConverter.GetBytes(date));
+            return ver;
+        });
