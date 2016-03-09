@@ -1,0 +1,4 @@
+string appPath = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
+
+if (!appPath.EndsWith("/", StringComparison.Ordinal))
+	appPath = string.Concat(appPath, "/");
