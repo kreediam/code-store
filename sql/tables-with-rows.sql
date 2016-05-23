@@ -1,3 +1,5 @@
+-- http://stackoverflow.com/questions/1443704/query-to-list-number-of-records-in-each-table-in-a-database
+
 SELECT 
   t.NAME AS TableName,
   i.name as indexName,
