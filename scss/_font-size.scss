@@ -1,0 +1,8 @@
+@function calculate-rem($size) {
+    $rem-size: $size / $font-size-root;
+    @return $rem-size * 1rem; // *1 here so that we get a number, not a string
+}
+
+@mixin font-size($size) {
+    font-size: calculate-rem($size);
+}
