@@ -25,7 +25,7 @@ namespace SitefinityWebApp
                     }
                 }
             }
-            elsea
+            else
             {
                 var typesAndProviders = this.GetProviders(context.CurrentSite);
             }
