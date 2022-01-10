@@ -1,3 +1,5 @@
+-- https://knowledgebase.progress.com/articles/Article/Get-control-properties-values-and-pages-where-controls-are
+
 select pn.title_, od.caption_, cp.val, *
 from sf_object_data od
 join sf_page_node pn on od.page_id = pn.content_id
