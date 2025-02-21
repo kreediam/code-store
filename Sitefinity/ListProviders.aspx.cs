@@ -44,5 +44,20 @@ namespace SitefinityWebApp
 
             return result;
         }
+
+        private void GetProviders2()
+        {
+            var multisiteContext = SystemManager.CurrentContext as MultisiteContext;
+            var site = multisiteContext.CurrentSite;
+
+            List<MultisiteContext.SiteDataSourceLinkProxy> dataSources = site.SiteDataSourceLinks.ToList();
+
+            string librariesDataSourceName = typeof(LibrariesManager).FullName;
+            var a = site.GetProviders(librariesDataSourceName).Select(p => p.ProviderName);
+            var b = site.GetDefaultProvider(librariesDataSourceName);
+
+            var c = site.GetProviders("Authors").Select(p => p.ProviderName);
+            var d = site.GetDefaultProvider("Authors");
+        }
     }
 }
